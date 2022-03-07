@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    <h1>Se connecter</h1>
+
+   <form action="{{ path('signin') }}" method="post">
+       <div class="form-group">
+           <label class="form-label mt-4">Connexion</label>
+           <div class="form-floating mb-3">
+               <input type="text" name="_username" class="form-control" id="floatingInput" placeholder="username">
+               <label for="floatingInput">username</label>
+           </div>
+           <div class="form-floating">
+               <input type="password" name="_password" class="form-control" id="floatingPassword" placeholder="Password">
+               <label for="floatingPassword">Password</label>
+           </div>
+           <br>
+           <div class="form-floating">
+               <button type="submit" class="btn btn-light">Light</button>
+           </div>
+       </div>
+   </form>
+{% endblock %}

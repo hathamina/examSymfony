@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}les films{% endblock %}
+
+{% block body %}
+
+
+        <hr>
+        <h1>{{ film.name }}</h1>
+        <h4>Realisé par : {{ film.director }}</h4>
+        <p>Resumé : {{ film.summary }}</p>
+        <h6>Année de sortie : {{ film.createdAt|date('d-m-y') }}</h6>
+
+
+        <br>
+        <a href="{{ path('films') }}">Retour</a>
+        <a href="{{ path('delete', {id:film.id}) }}">Supprimer</a>
+        <a href="{{ path('change', {id:film.id}) }}">Modifier</a>
+
+        <hr>
+
+
+{% endblock %}

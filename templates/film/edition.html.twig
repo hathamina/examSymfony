@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}les films{% endblock %}
+
+{% block body %}
+
+      {{ form_start(formulaire) }}
+
+        {{ form_row(formulaire.name) }}
+        {{ form_row(formulaire.summary) }}
+        {{ form_row(formulaire.director) }}
+        {{ form_row(formulaire.createdAt) }}
+        <button type="submit" class="btn">submit</button>
+{{ form_end(formulaire) }}
+
+
+
+{% endfor %}
+
+{% endblock %}
